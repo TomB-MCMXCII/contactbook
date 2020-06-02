@@ -1,5 +1,5 @@
 # ContactBook - WORK IN PROGRESS!!!
-This is a .NET web-api project with entity framework for storing contacts.
+This is a .NET web-api project with entity framework for storing contacts. Frontend uses vue.js
 
 ## Specified conditions for this project :
 
