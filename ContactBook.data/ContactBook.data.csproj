@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3BA0766E-576C-4C10-AF63-98BE051A5E2C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ContactBook.data</RootNamespace>
+    <AssemblyName>ContactBook.data</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ContactBookDbContext.cs" />
+    <Compile Include="Migrations\201911052118445_initial.cs" />
+    <Compile Include="Migrations\201911052118445_initial.Designer.cs">
+      <DependentUpon>201911052118445_initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201911070714294_updated contact adress.cs" />
+    <Compile Include="Migrations\201911070714294_updated contact adress.Designer.cs">
+      <DependentUpon>201911070714294_updated contact adress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201911071118540_added lat an lng to adress.cs" />
+    <Compile Include="Migrations\201911071118540_added lat an lng to adress.Designer.cs">
+      <DependentUpon>201911071118540_added lat an lng to adress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201911100853300_hgh.cs" />
+    <Compile Include="Migrations\201911100853300_hgh.Designer.cs">
+      <DependentUpon>201911100853300_hgh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201911100907455_gjghhj.cs" />
+    <Compile Include="Migrations\201911100907455_gjghhj.Designer.cs">
+      <DependentUpon>201911100907455_gjghhj.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201911121016245_lazy loading off.cs" />
+    <Compile Include="Migrations\201911121016245_lazy loading off.Designer.cs">
+      <DependentUpon>201911121016245_lazy loading off.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201911271006139_salvation.cs" />
+    <Compile Include="Migrations\201911271006139_salvation.Designer.cs">
+      <DependentUpon>201911271006139_salvation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ContactBook.core\ContactBook.core.csproj">
+      <Project>{646cfc16-f24a-41a4-991d-8011fa9db8f3}</Project>
+      <Name>ContactBook.core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201911052118445_initial.resx">
+      <DependentUpon>201911052118445_initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201911070714294_updated contact adress.resx">
+      <DependentUpon>201911070714294_updated contact adress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201911071118540_added lat an lng to adress.resx">
+      <DependentUpon>201911071118540_added lat an lng to adress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201911100853300_hgh.resx">
+      <DependentUpon>201911100853300_hgh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201911100907455_gjghhj.resx">
+      <DependentUpon>201911100907455_gjghhj.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201911121016245_lazy loading off.resx">
+      <DependentUpon>201911121016245_lazy loading off.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201911271006139_salvation.resx">
+      <DependentUpon>201911271006139_salvation.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
